@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  background-color: #333;
+  width: 100%;
+  height: 3em;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav a.title {
+  color: white;
+  float: left;
+}
+
+.topnav a.title:hover {
+  background-color: #333;
+  color: #4CAF50;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.leftpanel {
+  background-color: #464646;
+  overflow: hidden;
+  float: left;
+  height: calc(100vh - 3em);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 15vw;
+}
+
+.leftpanel .patient_list {
+  list-style: none;
+  padding: 0;
+}
+
+.leftpanel .patient_list .patient {
+  text-align: center;
+}
+
+.leftpanel .patient_list .patient a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1em 0em;
+  text-decoration: none;
+  font-size: 17px;
+  width: 100%;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.leftpanel .patient_list .patient a span {
+  color: white;
+}
+
+.leftpanel .patient_list .patient a:hover {
+  background-color: #dddddd;
+}
+
+.leftpanel .patient_list .patient a:hover > span {
+  color: black;
+}
+
+.rightpanel {
+  background-color: #dddddd;
+  overflow: hidden;
+  float: right;
+  height: calc(100vh - 3em);
+  width: calc(100% - 15vw);
+}
+/*# sourceMappingURL=general.css.map */

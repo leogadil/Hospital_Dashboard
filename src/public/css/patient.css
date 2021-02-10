@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.categoryinfo {
+  margin: 1em 2em;
+  display: -ms-grid;
+  display: grid;
+}
+
+.categoryinfo .title hr {
+  margin-bottom: 2em;
+}
+
+.categoryinfo .entry {
+  display: inline-block;
+}
+
+.categoryinfo .entry label {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 200px;
+  text-align: right;
+  margin: .5em;
+  height: 1em;
+}
+
+.categoryinfo .entry span {
+  width: 2em;
+}
+
+.categoryinfo .entry span input, .categoryinfo .entry span select {
+  display: inline-block;
+  float: left;
+  margin: .5em;
+  width: 20vw;
+}
+
+.categoryinfo .entry span select {
+  width: calc(20vw + .6em);
+}
+
+.categoryinfo .entry span input[type=date] {
+  width: calc(20vw + .3em);
+}
+/*# sourceMappingURL=patient.css.map */

@@ -4,6 +4,7 @@ const express = require('express');
 const session = require('express-session');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const path = require('path');
 
 const access = require('./routes/access');
 const patient = require('./routes/patient');
@@ -13,12 +14,11 @@ const admin = require('./routes/admin');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// public folder 
-app.use(express.static(__dirname + "/views"));
+// public folder
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // express and express-session
 app.use(express.urlencoded({extended: false}))
-app.set('view engine', 'ejs');
 app.use(session({
     secret: 'secretpassword',
     resave: true,
@@ -35,7 +35,7 @@ app.use('/patient', patient);
 app.get('/', async (req, res) => {
     let session = req.session;
     if(session.userid) return res.status(200).redirect('/dashboard');
-    res.render("landingpage")
+    res.status(200).sendFile('/public/landingpage.html', {root: __dirname})
 })
 
 mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false});

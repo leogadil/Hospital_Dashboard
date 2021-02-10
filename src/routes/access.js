@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Doctor = require('../models/doctors');
 const bcrpyt = require('bcrypt');
+const path = require('path');
 
 router.get('/', (req, res) => {
     res.status(200).redirect('/')
@@ -11,7 +12,7 @@ router.get('/register', (req, res) => {
     let session = req.session;
     if(session.userid) return res.redirect('/dashboard');
 
-    res.status(200).render('doc/doc-register', {account: req.body, error: null});
+    res.status(200).sendFile(path.resolve('src/public/doc/doc-register.html'))
 })
 
 router.post('/register', async (req, res) => {
@@ -40,16 +41,27 @@ router.post('/register', async (req, res) => {
         try {
             register = await register.save();
             req.session.userid = id;
-            res.redirect('/dashboard');
+            res.status(200).json({
+                status: true,
+                redirect: '/dashboard',
+                userid: id
+            })
         } catch(error) {
             console.log(error);
             if(error.code == 11000) {
                 error = `Username is already registered. Try a different one!`;
             }
-            res.render('doc/doc-register', {account: register, error: error});
+            res.status(200).json({
+                status: false,
+                error: error
+            })
         }
     } else {
-        res.status(200).render('doc/doc-register', {account: req.body, error: "password mismatch"});
+        error = `Password didn't match.`;
+        res.status(200).json({
+            status: false,
+            error: error
+        })
     }
 })
 
@@ -57,7 +69,7 @@ router.get('/login', async (req, res) => {
     let session = req.session;
     if(session.userid) return res.redirect('/dashboard');
     
-    res.status(200).render('doc/doc-login', {account: req.body, error: null});
+    res.status(200).sendFile(path.resolve('src/public/doc/doc-login.html'))
 })
 
 router.post('/login', async (req, res) => {
@@ -70,12 +82,24 @@ router.post('/login', async (req, res) => {
             let ispasswordmatch = bcrpyt.compareSync(req.body.password, doc.password);
             if(ispasswordmatch) {
                 session.userid = doc.doc_id;
-                res.redirect('/dashboard');
+                res.status(200).json({
+                    status: true,
+                    redirect: '/dashboard',
+                    userid: doc.doc_id
+                })
             } else {
-                res.status(200).render('doc/doc-login', {account: req.body, error: "Invalid credentials"});
+                error = "Account Invalid";
+                res.status(200).json({
+                    status: false,
+                    error: error
+                })
             }
     } else {
-        res.status(200).render('doc/doc-login', {account: req.body, error: "Account Invalid"});
+        error = "Account Invalid";
+        res.status(200).json({
+            status: false,
+            error: error
+        })
     }
 
 })
