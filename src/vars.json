@@ -1,0 +1,6 @@
+{
+    "error_message": {
+        "password_doesnt_match": "Password Doesn't Match",
+        "account_not_found": "Account"
+    }
+}
