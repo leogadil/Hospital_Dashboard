@@ -10,3 +10,6 @@ a buggy system that hold all records and information from a hospital.
 - [ ] Init Database (MonggoDB)
 - [ ] Make it Demo Ready
 
+# TODO
+
+create patient registration post.

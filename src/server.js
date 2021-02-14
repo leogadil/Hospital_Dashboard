@@ -10,6 +10,7 @@ const access = require('./routes/access');
 const patient = require('./routes/patient');
 const dashboard = require('./routes/dashboard');
 const admin = require('./routes/admin');
+const api = require('./routes/api');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -31,6 +32,7 @@ app.use('/access', access);
 app.use('/dashboard', dashboard);
 app.use('/ad', admin);
 app.use('/patient', patient);
+app.use('/api', api);
 
 app.get('/', async (req, res) => {
     let session = req.session;

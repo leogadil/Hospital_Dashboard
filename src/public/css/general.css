@@ -60,11 +60,11 @@
   padding: 0;
 }
 
-.leftpanel .patient_list .patient {
+.leftpanel .patient_list li {
   text-align: center;
 }
 
-.leftpanel .patient_list .patient a {
+.leftpanel .patient_list li .patient {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -76,15 +76,15 @@
   overflow: hidden;
 }
 
-.leftpanel .patient_list .patient a span {
+.leftpanel .patient_list li .patient span {
   color: white;
 }
 
-.leftpanel .patient_list .patient a:hover {
+.leftpanel .patient_list li .patient:hover {
   background-color: #dddddd;
 }
 
-.leftpanel .patient_list .patient a:hover > span {
+.leftpanel .patient_list li .patient:hover > span {
   color: black;
 }
 

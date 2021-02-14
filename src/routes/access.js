@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Doctor = require('../models/doctors');
+const Doctor = require('../models/doctor');
 const bcrpyt = require('bcrypt');
 const path = require('path');
 
@@ -33,6 +33,8 @@ router.post('/register', async (req, res) => {
 
         //create db record
         let register = new Doctor({
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
             username: req.body.username,
             password: req.body.password,
             doc_id: id

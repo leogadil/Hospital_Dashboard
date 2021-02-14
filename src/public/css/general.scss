@@ -55,10 +55,10 @@
         list-style: none;
         padding: 0;
         
-        .patient {
+        li {
             text-align: center;
 
-            a {
+            .patient {
                 float: left;
                 color: #f2f2f2;
                 text-align: center;
@@ -74,10 +74,10 @@
                 }
             }
 
-            a:hover {
+            .patient:hover {
                 background-color: rgb(221, 221, 221);
             }
-            a:hover > span {
+            .patient:hover > span {
                 color: black;
             }
         }
