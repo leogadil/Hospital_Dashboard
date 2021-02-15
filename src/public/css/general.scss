@@ -59,24 +59,37 @@
             text-align: center;
 
             .patient {
+                border: none;
                 float: left;
                 color: #f2f2f2;
-                text-align: center;
+                text-align: left;
                 padding: 1em 0em;
+                padding-left: 1em;
                 text-decoration: none;
                 font-size: 17px;
                 width: 100%;
                 min-width: 100%;
                 overflow: hidden;
+                cursor: pointer;
                 
                 span {
                     color: white;
+                    text-transform: capitalize;
                 }
             }
 
-            .patient:hover {
+            .active {
                 background-color: rgb(221, 221, 221);
             }
+
+            .active span {
+                color: black;
+            }
+
+            .patient:hover {
+                background-color: rgb(172, 172, 172);
+            }
+
             .patient:hover > span {
                 color: black;
             }

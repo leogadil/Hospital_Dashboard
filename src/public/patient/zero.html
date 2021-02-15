@@ -26,16 +26,16 @@
                 <div class="leftpanel">
                     <div class="entry">
                         <label for="patient_ID">ID: </label>
-                        <span><input type="Text" name="patient_ID"></span>
+                        <span><input type="Text" name="patient_ID" id="patient_ID"></span>
                     </div>
                     <div class="entry inline">
-                        <label for="patient_name">Last Name: </label>
-                        <span><input type="Text" name="patient_name"></span>
-                        <label for="patient_name">Firstname: </label>
-                        <span><input type="Text" name="patient_name"></span>
-                        <label for="patient_name">Middle Initial: </label>
+                        <label for="patient_last">Last Name: </label>
+                        <span><input type="Text" name="patient_last" id="patient_last"></span>
+                        <label for="patient_first">Firstname: </label>
+                        <span><input type="Text" name="patient_first" id="patient_first"></span>
+                        <label for="patient_mi">Middle Initial: </label>
                         <span>
-                            <select name="patient_name">
+                            <select name="patient_mi" id="patient_mi">
                                 <option value="A">A.</option>
                                 <option value="B">B.</option>
                                 <option value="C">C.</option>
@@ -62,48 +62,48 @@
                                 <option value="X">X.</option>
                                 <option value="Y">Y.</option>
                                 <option value="Z">Z.</option>
-                                <option value="None">Not Applicable</option>
+                                <option value="Not Applicable">Not Applicable</option>
                         </select>
                     </span>
                     </div>
                     <div class="entry">
                         <label for="patient_birthdate">Birthdate: </label>
-                        <span><input type="date" id="patient_birthdate" name="patient_birthdate"></span>
+                        <span><input type="date" id="patient_birthdate" class="datetoday" name="patient_birthdate"></span>
                     </div>
                 </div>
                 <div class="rightpanel">
                     <div class="entry">
                         <label for="patient_gender">Gender: </label>
                         <span>
-                            <select name="patient_gender" id="">
+                            <select name="patient_gender" id="patient_gender">
                                 <option value="Male">Male</option>
-                                <option value="Male">Female</option>
-                                <option value="Male">Other</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
                             </select>
                     </span>
                     </div>
                     <div class="entry">
                         <label for="patient_status">Status: </label>
                         <span>
-                            <select name="patient_gender" id="">
-                                <option value="Male">Single</option>
-                                <option value="Male">Married</option>
-                                <option value="Male">Widowed</option>
-                                <option value="Male">Divorced</option>
+                            <select name="patient_status" id="patient_status">
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widowed">Widowed</option>
+                                <option value="Divorced">Divorced</option>
                             </select>
                         </span>
                     </div>
                     <div class="entry">
-                        <label for="patient_status">Address: </label>
-                        <span><input type="Text" name="patient_status"></span>
+                        <label for="patient_address">Address: </label>
+                        <span><input type="Text" name="patient_address" id="patient_address"></span>
                     </div>
                     <div class="entry">
-                        <label for="patient_status">Phone/Telephone: </label>
-                        <span><input type="Text" name="patient_status"></span>
+                        <label for="patient_tel">Phone/Telephone: </label>
+                        <span><input type="Text" name="patient_tel" id="patient_tel"></span>
                     </div>
                     <div class="entry">
-                        <label for="patient_status">Email: </label>
-                        <span><input type="email" name="patient_status"></span>
+                        <label for="patient_email">Email: </label>
+                        <span><input type="email" name="patient_email" id="patient_email"></span>
                     </div>
                 </div>
             </div>

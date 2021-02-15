@@ -65,23 +65,35 @@
 }
 
 .leftpanel .patient_list li .patient {
+  border: none;
   float: left;
   color: #f2f2f2;
-  text-align: center;
+  text-align: left;
   padding: 1em 0em;
+  padding-left: 1em;
   text-decoration: none;
   font-size: 17px;
   width: 100%;
   min-width: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .leftpanel .patient_list li .patient span {
   color: white;
+  text-transform: capitalize;
+}
+
+.leftpanel .patient_list li .active {
+  background-color: #dddddd;
+}
+
+.leftpanel .patient_list li .active span {
+  color: black;
 }
 
 .leftpanel .patient_list li .patient:hover {
-  background-color: #dddddd;
+  background-color: #acacac;
 }
 
 .leftpanel .patient_list li .patient:hover > span {

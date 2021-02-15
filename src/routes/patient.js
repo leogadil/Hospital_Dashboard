@@ -64,12 +64,14 @@ router.post('/register', async (req, res) => {
     }
 })
 
-router.get('/0', (req, res) => {
-    res.status(200).sendFile(path.resolve('src/public/patient/zero.html'))
-})
-
 router.get('/success', (req, res) => {
     res.status(200).json("Successfully registered.")
 })
+
+router.get('/:value', (req, res) => {
+    res.status(200).sendFile(path.resolve('src/public/patient/zero.html'))
+})
+
+
 
 module.exports = router;

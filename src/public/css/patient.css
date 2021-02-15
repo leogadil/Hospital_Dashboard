@@ -238,6 +238,7 @@
 
 .categoryinfo .entry {
   display: inline-block;
+  min-width: 550px;
 }
 
 .categoryinfo .entry label {
