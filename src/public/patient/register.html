@@ -142,9 +142,9 @@
                                 <div class="header">
                                     <span>Info:</span>
                                     <div class="history_container">
-                                        <label for="history_title">Date: </label>
+                                        <label for="history_date">Date: </label>
                                         <span>
-                                            <input type="date" name="history_title" class="datetoday" id="history_title">
+                                            <input type="date" name="history_date" class="datetoday" id="history_date">
                                         </span>
                                     </div>
                                     <div class="history_container">
@@ -166,13 +166,53 @@
                                 <span>Files:</span>
                                 <div class="file_box">
                                     <div class="file">
-                                        <input type="file" name="file_add" id="file_add">
+                                        <input type="file" name="file_add" id="file_add" multiple>
                                     </div>
                                 </div>
                             </div>
                             <div class="buttondiv">
                                 <div class="buttons">
-                                    <button class="savebutton">Save</button>
+                                    <button class="savebutton" onclick="alert('end of demo')">Save</button>
+                                    <button class="cancelbutton">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="record">
+                            <div class="record_info">
+                                <div class="header">
+                                    <span>Info:</span>
+                                    <div class="history_container">
+                                        <label for="history_date">Date: </label>
+                                        <span>
+                                            <input type="date" name="history_date" class="datetoday" id="history_date">
+                                        </span>
+                                    </div>
+                                    <div class="history_container">
+                                        <label for="history_title">Title: </label>
+                                        <span>
+                                            <input type="text" name="history_title" id="history_title">
+                                        </span>
+                                    </div>
+                                    <div class="history_container">
+                                        <label for="history_description">Description: </label>
+                                        <span>
+                                            <textarea name="history_description" id="" cols="30" rows="5"></textarea>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filerecordcontainer">
+                                <hr>
+                                <span>Files:</span>
+                                <div class="file_box">
+                                    <div class="file">
+                                        <input type="file" name="file_add" id="file_add" multiple>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttondiv">
+                                <div class="buttons">
+                                    <button class="savebutton" onclick="alert('end of demo')">Save</button>
                                     <button class="cancelbutton">Cancel</button>
                                 </div>
                             </div>
@@ -185,7 +225,6 @@
                             <div class="title">
                                 <span>Teeth Diagram</span>
                             </div>
-                            
                             <div class="tooth-chart">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      viewBox="0 0 450 700" enable-background="new 0 0 450 700" xml:space="preserve">
@@ -543,6 +582,12 @@
                                         </g>
                                     </g>
                                 </svg>
+                            </div>
+                            <div class="legends">
+                                <input type='radio' id="" name="legend"/>
+                                <input type='radio' name="legend"/>
+                                <input type='radio' name="legend"/>
+                                <input type='radio' name="legend"/>
                             </div>
                         </div>
                     </div>

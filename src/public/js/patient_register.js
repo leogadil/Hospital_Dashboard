@@ -57,4 +57,8 @@ $(document).ready( function() {
             $(this).attr('class', null);
         }
     })
+
+    $("#file_add").on('change',function() {
+        console.log($(this).val())
+    })
 });
