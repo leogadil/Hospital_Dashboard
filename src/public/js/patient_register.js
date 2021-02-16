@@ -39,4 +39,22 @@ $(document).ready( function() {
             }
         })
     })
+
+    $('polygon, path').click(function(event) {
+        // if($(this).attr('class') == "gold") {
+        //     $(this).attr('class', '');
+        // } else {
+        //     $(this).attr('class', 'gold');
+        // }
+
+        if($(this).attr('class') == null) {
+            $(this).attr('class', 'gold');
+        } else if($(this).attr('class') == 'gold') {
+            $(this).attr('class', 'green');
+        } else if($(this).attr('class') == 'green') {
+            $(this).attr('class', 'blue');
+        } else if($(this).attr('class') == 'blue') {
+            $(this).attr('class', null);
+        }
+    })
 });

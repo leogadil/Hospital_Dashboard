@@ -16,7 +16,7 @@ $(document).ready( function($) {
                 }
             })
 
-            $('patient').click(function (event) {
+            $('patient,path').click(function (event) {
                 var pid = $(this).attr('id');
                 $('#viewer').attr('src', `patient/${pid}`)
                 $('patient').each(function(i) {

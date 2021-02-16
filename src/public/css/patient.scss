@@ -154,6 +154,7 @@
                                 display: inline-block;
                                 float: left;
                                 width: 20vw;
+                                max-width: 20vw;
                                 font-size: 1.1em;
                             }
                 
@@ -201,6 +202,7 @@
 
                     .savebutton {
                         background-color: var(--accent-1);
+                        border: 1px solid var(--accent-1);
                     }
 
                     .cancelbutton {
@@ -228,19 +230,46 @@
             margin: 2em 0 1em 0;
             padding: 1em 0 3em 0;
 
+            .title {
+                text-align: center;
+                font-size: 2em;
+                font-weight: bolder;
+            }
+
             .tooth-chart{
                 margin: auto;
                 width: 40%;
+
+            }
+
+            #toothLabels, #dmftLabels {
+
+                text {
+                    user-select: none;
+                }
             }
             
             #Spots{
                 polygon, path{
-                    -webkit-transition:fill .25s;
-                    transition:fill .25s;
+                    -webkit-transition:fill .10s;
+                    transition:fill .10s;
                 }
                 polygon:hover, polygon:active, path:hover, path:active{
-                    fill:#dddddd !important;
+                    fill:#dddddd;
                 }
+
+                .blue {
+                    fill:#1757e0 !important;
+                }
+
+                .green {
+                    fill:#17e017 !important;
+                }
+
+                .gold {
+                    fill:#e0bb17 !important;
+                }
+                
             }
         }
     }
