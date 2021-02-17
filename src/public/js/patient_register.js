@@ -33,6 +33,7 @@ $(document).ready( function() {
             tel_number: $('#patient_tel_number').val(),
             email: $('#patient_email').val(),
             assigned_doc: $('#doctorlist ').val(),
+            history: global_record
         }
 
         console.log(data)
