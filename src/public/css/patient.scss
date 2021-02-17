@@ -154,7 +154,13 @@
                                 float: left;
                                 width: 20vw;
                                 max-width: 20vw;
+                                max-height: 10vw;
+                                min-width: 20vw;
                                 font-size: 1.1em;
+                            }
+
+                            textarea {
+                                min-height: 5vw;
                             }
                 
                             input[type=date] {
@@ -317,7 +323,7 @@
                 width: calc(20vw);
             }
 
-            input,select:disabled {
+            input:disabled, select:disabled {
                 opacity: .5;
             }
         }
