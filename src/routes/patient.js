@@ -40,7 +40,8 @@ router.post('/register', async (req, res) => {
         username: req.body.username,
         password: req.body.password,
         patient_id: id,
-        assigned_doc: req.body.assigned_doc
+        assigned_doc: req.body.assigned_doc,
+        history_record: JSON.stringify(req.body.history)
     })
 
     console.log(register)
@@ -66,6 +67,10 @@ router.post('/register', async (req, res) => {
 
 router.get('/success', (req, res) => {
     res.status(200).json("Successfully registered.")
+})
+
+router.get('/0', (req, res) => {
+    res.status(200).sendFile(path.resolve('src/public/patient/default.html'))
 })
 
 router.get('/:value', (req, res) => {

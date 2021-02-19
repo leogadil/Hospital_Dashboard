@@ -39,6 +39,25 @@
   color: #4CAF50;
 }
 
+.wrapper-default {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-default .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1em;
+  opacity: .5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .categoryinfo {
   margin: .5em 1em;
   padding: .5em 1em;
