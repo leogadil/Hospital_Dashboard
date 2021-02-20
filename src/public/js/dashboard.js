@@ -3,18 +3,29 @@ $(document).ready( function($) {
 
     $.get(`/api/getpatients/${value}`, {bypass: true}, function(res) {
         if(res.status) {
-            $.each(res.data, function(i, item) {
+            if(res.data.length != 0) {
+                $.each(res.data, function(i, item) {
+                    $('#patient_list').append($('<li>', {}).append($('<patient>', {
+                        class: (i == 0) ? "patient active" : "patient",
+                        id: `${item.patient_id}`
+                    }).append($('<span>', {
+                        text: `${item.lastname}, ${item.firstname} ${item.middleinitial}.`
+                    }))))
+    
+                    if(i == 0) {
+                        $('#viewer').attr('src', `patient/${item.patient_id}`)
+                    }
+                })
+            } else {
                 $('#patient_list').append($('<li>', {}).append($('<patient>', {
-                    class: (i == 0) ? "patient active" : "patient",
-                    id: `${item.patient_id}`
+                    class: "patient",
+                    id: `0`
                 }).append($('<span>', {
-                    text: `${item.lastname}, ${item.firstname} ${item.middleinitial}.`
+                    text: `No Patient`
                 }))))
-
-                if(i == 0) {
-                    $('#viewer').attr('src', `patient/${item.patient_id}`)
-                }
-            })
+                
+                $('#viewer').attr('src', `patient/0`)
+            }
 
             $('patient,path').click(function (event) {
                 var pid = $(this).attr('id');

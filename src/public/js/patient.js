@@ -16,6 +16,41 @@ $(document).ready( function($) {
         $('#patient_address').val(res.address).prop("disabled", true)
         $('#patient_tel').val(res.tel_number).prop("disabled", true)
         $('#patient_email').val(res.email).prop("disabled", true)
+
+        $('.record_box').html("")
+        var records = JSON.parse(res.history_record)
+
+        console.log(res.history_record)
+        console.log(records)
+
+        // $.each(records, function(i, item) {
+        //     $('.record_box')
+        //     .append($('<div>', {
+        //         class: 'record'
+        //     }).append($('<div>', {
+        //         class: 'record_info'
+        //     }).append($('<div>', {
+        //         class: 'header',
+        //     }).append($('<span>', {
+        //         class: 'title',
+        //         text: item.title
+        //     }).append($('<span>', {
+        //         class: 'date',
+        //         text: `(${item.date})`
+        //     }))).append($('<p>', {
+        //         class: 'description',
+        //         text: item.description
+        //     })))).append($('<div>', {
+        //         class: 'filerecordcontainer'
+        //     }).append($('<hr>'))
+        //     .append($('<span>', {
+        //         text: 'Files: '
+        //     })).append($('<div>', {
+        //         class: 'file_box'
+        //     }).append($('<div>', {
+        //         text: 'No Files'
+        //     }))))) /// here will the files go
+        // })
     })
 
     function formatDate(date) {

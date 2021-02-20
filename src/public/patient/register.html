@@ -16,7 +16,7 @@
 <body>
     <div class="wrapper">
         <div class="topnav">
-            <a class="active" href="#home">menu</a>
+            <a class="active" id="menu" href="#home">menu</a>
             <a class="title" href="/">CLINIC RECORD</a>
         </div>
         <div class="categoryinfo">
@@ -156,7 +156,7 @@
                                     <div class="history_container">
                                         <label for="history_description">Description: </label>
                                         <span>
-                                            <textarea name="history_description" id="" cols="30" rows="5"></textarea>
+                                            <textarea name="history_description" id="history_description" cols="30" rows="5"></textarea>
                                         </span>
                                     </div>
                                 </div>
@@ -166,53 +166,13 @@
                                 <span>Files:</span>
                                 <div class="file_box">
                                     <div class="file">
-                                        <input type="file" name="file_add" id="file_add" multiple>
+                                        <input type="file" name="file_add" id="file_add" multiple disabled>
                                     </div>
                                 </div>
                             </div>
                             <div class="buttondiv">
                                 <div class="buttons">
-                                    <button class="savebutton" onclick="alert('end of demo')">Save</button>
-                                    <button class="cancelbutton">Cancel</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="record">
-                            <div class="record_info">
-                                <div class="header">
-                                    <span>Info:</span>
-                                    <div class="history_container">
-                                        <label for="history_date">Date: </label>
-                                        <span>
-                                            <input type="date" name="history_date" class="datetoday" id="history_date">
-                                        </span>
-                                    </div>
-                                    <div class="history_container">
-                                        <label for="history_title">Title: </label>
-                                        <span>
-                                            <input type="text" name="history_title" id="history_title">
-                                        </span>
-                                    </div>
-                                    <div class="history_container">
-                                        <label for="history_description">Description: </label>
-                                        <span>
-                                            <textarea name="history_description" id="" cols="30" rows="5"></textarea>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="filerecordcontainer">
-                                <hr>
-                                <span>Files:</span>
-                                <div class="file_box">
-                                    <div class="file">
-                                        <input type="file" name="file_add" id="file_add" multiple>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="buttondiv">
-                                <div class="buttons">
-                                    <button class="savebutton" onclick="alert('end of demo')">Save</button>
+                                    <button class="savebutton" id="savebutton" onclick="save()">Save</button>
                                     <button class="cancelbutton">Cancel</button>
                                 </div>
                             </div>
@@ -582,12 +542,6 @@
                                         </g>
                                     </g>
                                 </svg>
-                            </div>
-                            <div class="legends">
-                                <input type='radio' id="" name="legend"/>
-                                <input type='radio' name="legend"/>
-                                <input type='radio' name="legend"/>
-                                <input type='radio' name="legend"/>
                             </div>
                         </div>
                     </div>

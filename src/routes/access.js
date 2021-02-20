@@ -111,6 +111,8 @@ router.get('/logout', (req, res) => {
     if(session.userid) {
         session.userid = null
         res.redirect('/');
+    } else {
+        res.redirect('/');
     }
 })
 

@@ -58,6 +58,10 @@ const registerSchema = new mongoose.Schema({
         type: Date,
         required: true,
         default: new Date()
+    },
+    history_record: {
+        type: Object,
+        default: new Object,
     }
 })
 
