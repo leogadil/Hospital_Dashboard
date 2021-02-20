@@ -1,0 +1,78 @@
+body {
+	margin: 0;
+	background-color: #b2cede;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+h1 {
+	font-family: "Nunito", sans-serif;
+	font-size: 50px;
+	color: #807182;
+}
+
+form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input {
+	width: 300px;
+	margin: 10px 0;
+	padding: 15px 10px;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #807182;
+	border-radius: 20px;
+	background-color: #cce3de;
+}
+
+input:hover {
+	background-color: #eaf4f4;
+}
+
+button {
+	width: 100px;
+	margin: 10px 0;
+	padding: 10px 10px;
+	border: none;
+	border-radius: 20px;
+	background-color: #cce3de;
+}
+
+button:hover {
+	background-color: #eaf4f4;
+	cursor: pointer;
+}
+
+a {
+	font-family: "Nunito", sans-serif;
+	font-size: 15px;
+	text-decoration: none;
+	color: #807182;
+
+	display: inline-block;
+	position: relative;
+}
+
+a:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 3px;
+	left: 50%;
+	position: absolute;
+	background: #807182;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+
+a:hover:after {
+	width: 100%;
+	left: 0;
+}

@@ -1,0 +1,37 @@
+body {
+	margin: 0;
+	background-color: #b2cede;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+a {
+	font-family: "Nunito", sans-serif;
+	font-size: 50px;
+	text-decoration: none;
+	color: #807182;
+
+	display: block;
+	padding: 15px 20px;
+	position: relative;
+}
+
+a:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 3px;
+	left: 50%;
+	position: absolute;
+	background: #807182;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+
+a:hover:after {
+	width: 100%;
+	left: 0;
+}
